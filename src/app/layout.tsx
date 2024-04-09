@@ -3,7 +3,7 @@ import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/ui/navbar";
 import Footer from "@/components/ui/footer";
-
+import { GoogleTagManager } from "@next/third-parties/google";
 const inter = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -20,6 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-TMDQTCFM" />
       <body className={inter.className}>
         <Navbar />
         {children}

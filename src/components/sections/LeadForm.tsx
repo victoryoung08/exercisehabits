@@ -3,13 +3,12 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
-import { addMailerliteContact } from "@/lib/utils";
+import { addMailerliteContact } from "@/lib/actions";
 export default function LeadForm() {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log("submit", "clicked");
     const formData = new FormData(e.target);
-    console.log(formData);
     addMailerliteContact(formData);
   };
 

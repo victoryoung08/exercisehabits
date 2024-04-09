@@ -44,15 +44,15 @@ export default async function LogoBlock({ textColor }: LogoBlockType) {
   return (
     <section className="section-padding flex flex-col items-center gap-8">
       <p className="font-medium">Partnered and Worked Together With</p>
-      <div className="flex items-center gap-12">
+      <div className="flex flex-row flex-wrap justify-center items-center gap-12 max-w-[280px] lg:max-w-full">
         {logos &&
           logos.map((logo: any) => (
             <Image
               src={logo.src}
               width={60}
               height={20}
-              alt={`logo${logo.id}`}
-              key={`logo ${logo.id}`}
+              alt={`logo${logo.name}`}
+              key={`logo ${logo.name}`}
             />
           ))}
       </div>
