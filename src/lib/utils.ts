@@ -1,8 +1,7 @@
 import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import qs from "qs";
-import { AnyAaaaRecord } from "dns";
-
+// import contentful from "contentful";
 const baseURL = process.env.NEXT_PUBLIC_MAILERLITE_BASEURL;
 const api = process.env.NEXT_PUBLIC_MAILERLITE_API;
 
@@ -42,5 +41,27 @@ export const addMailerliteContact = async (formData: any) => {
     console.log("posted to mailerlite");
   } catch (err) {
     console.log("Something went wrong with: ", err);
+  }
+};
+
+// CONTENTFUL
+const contentful = require("contentful");
+
+export const contentfulClient = contentful.createClient({
+  space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID!,
+  accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_TOKEN!,
+});
+
+export const getImagesFromEntries = async (entryID: string) => {
+  const data = await contentfulClient.getEntry(entryID);
+  try {
+    const fields = data.fields.media;
+    const links = fields.map((field: any) => {
+      const baseURL = process.env.NEXT_PUBLIC_CONTENTFUL_BASEURL!;
+      return "https:" + field.fields.file.url;
+    });
+    return links;
+  } catch (err) {
+    console.log("something went wrong", err);
   }
 };

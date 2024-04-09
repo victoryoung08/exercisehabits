@@ -8,7 +8,7 @@ const inter = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title:
-    "NDIS Exercise Physiology Liverpool | Mobile NDIS Exercise & Personal Training",
+    "Exercise Habits Exercise Physiology | Mobile Exercise Physiology for Sydney NDIS Participants",
   description:
     "University Quailified and No Out of Pocket Charges. We come to you with NDIS Exercise Physiology.",
 };

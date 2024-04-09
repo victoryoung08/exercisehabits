@@ -6,14 +6,14 @@ export default function AboutUs() {
     <section className="bg-sky-900 px-4 py-12" id="about">
       <div className="bg-amber-50 rounded-tl-[48px] rounded-tr-[48px] rounded-b-[24px] section-padding flex flex-col gap-4 ">
         <div className="flex flex-col gap-4">
-          <p>Liverpool & South West Sydney</p>
+          <p>Sydney&apos;s South</p>
           <h2>
             NDIS Exercise Physiologists Looking After Your Health and Fitness
           </h2>
           <p>
-            With strong grass roots to the South West Region of Sydney,
-            we&apos;re focused on delivering high quality mobile and in-home
-            Exercise Physiology services for NDIS Participants. Our Exercise
+            With strong grass roots to the South Region of Sydney, we&apos;re
+            focused on delivering high quality mobile and in-home Exercise
+            Physiology services for NDIS Participants. Our Exercise
             Physiologists are university trained and qualified with a wealth of
             experience working with NDIS Participants long term. We truly
             believe everyone and anyone can exercise and shouldn&apos;t be

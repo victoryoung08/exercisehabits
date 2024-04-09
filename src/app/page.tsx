@@ -3,8 +3,10 @@ import MainCTAButton from "@/components/blocks/MainCTAButton";
 import MapsEmbed from "@/components/blocks/MapsEmbed";
 import SliderTextWithImage from "@/components/blocks/SliderTextWithImage";
 import AboutUs from "@/components/sections/AboutUs";
+import Community from "@/components/sections/Community";
 import HowItWorks from "@/components/sections/HowItWorks";
 import LeadForm from "@/components/sections/LeadForm";
+import ProfileAbout from "@/components/sections/ProfileAbout";
 import ServiceGrid from "@/components/sections/ServiceGrid";
 import { Button } from "@/components/ui/button";
 import { client } from "@/lib/sanity";
@@ -21,8 +23,7 @@ export default async function Home() {
   // console.log(data[0]);
   const featureIcons = [
     {
-      heading:
-        "Guided and Expert Guidance from Qualified Exercise Professionals",
+      heading: "Expert Guidance from Qualified Exercise Professionals",
       body: "Be sure we'll come up with an exercise plan best suited for your individual needs",
       icon: PersonSimpleThrow,
     },
@@ -37,9 +38,24 @@ export default async function Home() {
       icon: UserCircleCheck,
     },
     {
-      heading: "No out of pocket charges",
+      heading: "NDIS Funded - No out of pocket charges",
       body: "All our sessions can be completely covered under your NDIS Plan",
       icon: SealCheck,
+    },
+  ];
+
+  const heroList = [
+    {
+      key: "1",
+      item: "Exercise Therapy helping you do more",
+    },
+    {
+      key: "2",
+      item: "We come to you",
+    },
+    {
+      key: "3",
+      item: "NDIS Funded - No out of pocket charges",
     },
   ];
 
@@ -59,17 +75,24 @@ export default async function Home() {
             />
           </div>
           <div className="flex flex-col gap-8 text-white">
-            <h1>In Home & Mobile NDIS Exercise Physiology for Liverpool</h1>
-            <p>
-              Work with our University Qualified Exercise Physiologists
-              <br />
-              to help you build strength and fitness
-            </p>
+            <h1>
+              Get Fit, Strong, and More Independent with our NDIS Exercise
+              Physiology
+            </h1>
+            <div className="flex flex-col gap-2">
+              {heroList.map((list) => (
+                <div className="flex gap-2 items-center" key={list.key}>
+                  <SealCheck size={20} />
+                  <p>{list.item}</p>
+                </div>
+              ))}
+            </div>
             <MainCTAButton type="secondary" />
           </div>
         </div>
       </section>
       <LogoBlock textColor="white" />
+      <Community />
       {/* Feature Cards */}
       <section className="section-padding flex flex-col gap-8">
         <div className="flex flex-col gap-4">
@@ -103,6 +126,7 @@ export default async function Home() {
 
       <ServiceGrid />
       <HowItWorks />
+      <ProfileAbout />
       <LeadForm />
       <AboutUs />
       <MapsEmbed />
