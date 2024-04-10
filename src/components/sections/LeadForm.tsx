@@ -45,8 +45,13 @@ export default function LeadForm() {
             </label>
             <Textarea name="info" />
           </div>
-          <div className="py-4 mx-auto relative">
-            <Button variant="default" size="lg" type="submit">
+          <div className="py-4 w-2/3 relative mx-auto">
+            <Button
+              variant="default"
+              size="lg"
+              type="submit"
+              className="bg-orange-500 w-full"
+            >
               Contact Us
             </Button>
             <Image
@@ -54,7 +59,7 @@ export default function LeadForm() {
               width={32}
               height={32}
               alt="ndis-logo"
-              className="absolute top-1/2 right-[-40%] -translate-y-[50%]"
+              className="absolute top-1/2 right-[-20%] -translate-y-[50%]"
             />
           </div>
         </form>
