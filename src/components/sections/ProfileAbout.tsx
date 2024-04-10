@@ -22,14 +22,14 @@ const data: ImageWithTextProps["data"] = {
   image: {
     src: "/photos/vic.jpeg",
     alt: "Exercise Habits Exercise Physiology",
-    width: 600,
-    height: 600,
+    width: 480,
+    height: 480,
   },
 };
 
 export default function ProfileAbout() {
   return (
-    <section className="section-padding">
+    <section className="">
       <ImageWithText data={data} />
     </section>
   );

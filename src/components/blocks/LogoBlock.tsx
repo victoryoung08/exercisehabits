@@ -21,11 +21,11 @@ const logos = [
   },
   {
     name: "countryWide",
-    src: "/logos/countrywide.png",
+    src: "/logos/countryWide.png",
   },
   {
     name: "inMotion",
-    src: "/logos/inmotion.webp",
+    src: "/logos/inMotion.webp",
   },
   {
     name: "upa",

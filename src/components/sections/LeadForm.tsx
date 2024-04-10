@@ -14,17 +14,17 @@ export default function LeadForm() {
 
   return (
     <section
-      className=" py-12 bg-sky-900 flex flex-col items-center justify-center"
+      className="py-12 px-4 bg-sky-900 flex flex-col items-center justify-center"
       id="contactBlock"
     >
-      <div className="bg-white py-8 px-12 rounded-lg">
+      <div className="bg-white py-8 px-12 rounded-lg max-w-[600px] w-full">
         <div className="py-8 mx-auto text-center">
           <h2>Get Started and Contact Us</h2>
           <p>Simply fill in the form and we&apos;ll be in touch</p>
         </div>
         <form
           onSubmit={handleSubmit}
-          className="flex flex-col gap-4 max-w-[720px] w-full mx-auto"
+          className="flex flex-col gap-4 w-full mx-auto max-w-[600px]"
           id="contactForm"
         >
           <div>

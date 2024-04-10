@@ -6,7 +6,6 @@ import AboutUs from "@/components/sections/AboutUs";
 import Community from "@/components/sections/Community";
 import HowItWorks from "@/components/sections/HowItWorks";
 import LeadForm from "@/components/sections/LeadForm";
-import ProfileAbout from "@/components/sections/ProfileAbout";
 import ServiceGrid from "@/components/sections/ServiceGrid";
 import { Button } from "@/components/ui/button";
 import { client } from "@/lib/sanity";
@@ -103,7 +102,7 @@ export default async function Home() {
             on your needs and goals
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
           {featureIcons.map((feature) => (
             <div
               className="border-gray-200 bg-amber-50 bg-opacity-10 border-[1.2px] rounded-tr-[96px] rounded-br-[36px] rounded-bl-[72px] rounded-tl-[24px] p-8 overflow-hidden"
@@ -126,7 +125,7 @@ export default async function Home() {
 
       <ServiceGrid />
       <HowItWorks />
-      <ProfileAbout />
+
       <LeadForm />
       <AboutUs />
       <MapsEmbed />

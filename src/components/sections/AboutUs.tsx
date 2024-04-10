@@ -1,10 +1,11 @@
 import MainCTAButton from "../blocks/MainCTAButton";
 import { Button } from "../ui/button";
+import ProfileAbout from "./ProfileAbout";
 
 export default function AboutUs() {
   return (
     <section className="bg-sky-900 px-4 py-12" id="about">
-      <div className="bg-amber-50 rounded-tl-[48px] rounded-tr-[48px] rounded-b-[24px] section-padding flex flex-col gap-4 ">
+      <div className="bg-amber-50 rounded-tl-[48px] rounded-tr-[48px] rounded-b-[24px] section-padding flex flex-col gap-12 ">
         <div className="flex flex-col gap-4">
           <p>Sydney&apos;s South</p>
           <h2>
@@ -21,10 +22,8 @@ export default function AboutUs() {
             improve your independence and improve your overall health, wellbeing
             and fitness.
           </p>
-          <div className="mx-auto lg:ml-0">
-            <MainCTAButton type="default" />
-          </div>
         </div>
+        <ProfileAbout />
       </div>
     </section>
   );

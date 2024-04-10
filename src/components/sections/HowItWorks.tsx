@@ -47,8 +47,8 @@ export default function HowItWorks() {
   ];
   return (
     <section className="px-12 py-24 mx-auto flex flex-col gap-20 lg:flex-row">
-      <div className="w-full flex flex-col gap-8">
-        <div>
+      <div className="w-full flex flex-col gap-8 lg:w-1/3">
+        <div className="flex flex-col gap-4">
           <span>Get Started with Exercise</span>
           <h2>How our Exercise Physiology Sessions work</h2>
 
@@ -68,7 +68,7 @@ export default function HowItWorks() {
           ))}
         </div>
       </div>
-      <div className="max-w-[600px] flex flex-col w-full mx-auto gap-12">
+      <div className="max-w-[600px] flex flex-col w-full mx-auto gap-12 lg:w-2/3">
         {data.map((d) => (
           <div className="relative mx-auto w-full px-12" key={d.step}>
             <AlternatingTextBlock data={d} length={data.length} />

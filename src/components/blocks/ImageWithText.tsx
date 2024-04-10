@@ -19,7 +19,7 @@ export type ImageProps = {
 };
 export default function ImageWithText({ data }: ImageWithTextProps) {
   return (
-    <div className="flex flex-col gap-8  items-center justify-center lg:flex-row max-w-[720px] mx-auto">
+    <div className="flex flex-col gap-8  items-start justify-center lg:flex-row">
       <div className="flex flex-col gap-4">
         <h3>{data.heading}</h3>
         <p>{data.body}</p>
@@ -29,13 +29,14 @@ export default function ImageWithText({ data }: ImageWithTextProps) {
           </Button>
         )}
       </div>
-      <div className="w-full">
+      <div className="w-full flex justify-center">
         {data.image && (
           <Image
             src={data.image}
             alt={data.heading}
             width={data.image.width}
             height={data.image.height}
+            className="rounded-2xl"
           />
         )}
       </div>
