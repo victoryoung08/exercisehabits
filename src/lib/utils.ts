@@ -2,6 +2,7 @@ import { type ClassValue, clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 import qs from "qs";
 import { redirect } from "next/navigation";
+import { ImageResponse } from "next/og";
 // import contentful from "contentful";
 const baseURL = process.env.NEXT_PUBLIC_MAILERLITE_BASEURL;
 const api = process.env.NEXT_PUBLIC_MAILERLITE_API;
@@ -68,3 +69,4 @@ export const getImagesFromEntries = async (entryID: string) => {
     console.log("something went wrong", err);
   }
 };
+

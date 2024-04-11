@@ -7,6 +7,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 const inter = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://exercisehabits.com.au"),
   title:
     "Exercise Habits Exercise Physiology | Mobile Exercise Physiology for Sydney NDIS Participants",
   description:

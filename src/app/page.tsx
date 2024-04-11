@@ -17,6 +17,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 
+
 export default async function Home() {
   // const data = await getContent();
   // console.log(data[0]);

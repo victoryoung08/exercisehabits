@@ -15,6 +15,7 @@ export const addMailerliteContact = async (formData: any) => {
       name: name,
       phone: phone,
     },
+    groups: ["118280578495677962"],
   };
 
   const fetchURL = baseURL + "/api/subscribers";
