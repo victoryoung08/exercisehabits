@@ -4,12 +4,22 @@ import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { addMailerliteContact } from "@/lib/actions";
+import { useState } from "react";
 export default function LeadForm() {
+  const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log("submit", "clicked");
-    const formData = new FormData(e.target);
-    addMailerliteContact(formData);
+    setIsLoading(true);
+    console.log(isLoading);
+    try {
+      const formData = new FormData(e.target);
+      addMailerliteContact(formData).then(() => {
+        setIsLoading(false);
+      });
+    } catch (error) {
+      console.log("Something went wrong!", error);
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -29,15 +39,15 @@ export default function LeadForm() {
         >
           <div>
             <label className="text-base font-medium">First name</label>
-            <Input name="name" type="text" />
+            <Input name="name" type="text" required />
           </div>
           <div>
             <label className="text-base font-medium">Email</label>
-            <Input type="email" name="email" />
+            <Input type="email" name="email" required />
           </div>
           <div>
             <label className="text-base font-medium">Phone</label>
-            <Input type="phone" name="phone" />
+            <Input type="phone" name="phone" required />
           </div>
           <div>
             <label className="text-base font-medium">
@@ -51,8 +61,9 @@ export default function LeadForm() {
               size="lg"
               type="submit"
               className="bg-orange-500 w-full"
+              disabled={isLoading}
             >
-              Contact Us
+              {isLoading ? "Submitting..." : "Contact Us"}
             </Button>
             <Image
               src={"/logos/ndis.svg"}
