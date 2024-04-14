@@ -110,7 +110,7 @@ export default async function Home() {
             </span>
           </h2>
           <p>
-            And it's our goal to come up with the most specific and best
+            And it&apos;s our goal to come up with the most specific and best
             exercise program to help you live a healthy and independent life.
           </p>
           <p>

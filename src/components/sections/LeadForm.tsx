@@ -42,7 +42,7 @@ export default function LeadForm() {
           </div>
           <div>
             {list.map((l) => (
-              <div className="flex items-center justify-center gap-2">
+              <div className="flex items-center justify-center gap-2" key={l}>
                 <SealCheck />
                 <p>{l}</p>
               </div>
