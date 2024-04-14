@@ -5,6 +5,7 @@ import { Input } from "../ui/input";
 import { Textarea } from "../ui/textarea";
 import { addMailerliteContact } from "@/lib/actions";
 import { useState } from "react";
+import { SealCheck } from "@phosphor-icons/react/dist/ssr";
 export default function LeadForm() {
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = (e: any) => {
@@ -22,15 +23,31 @@ export default function LeadForm() {
     }
   };
 
+  const list = [
+    "learn how exercise can improve your health and independence",
+    "breakdown the steps to achieve your goals",
+    "understand if we're a good fit working together",
+  ];
+
   return (
     <section
-      className="py-12 px-4 bg-sky-900 flex flex-col items-center justify-center"
+      className="py-12 px-4 bg-sky-900  flex flex-col items-center justify-center"
       id="contactBlock"
     >
       <div className="bg-white py-8 px-12 rounded-lg max-w-[600px] w-full">
-        <div className="py-8 mx-auto text-center">
-          <h2>Get Started and Contact Us</h2>
-          <p>Simply fill in the form and we&apos;ll be in touch</p>
+        <div className="py-8 mx-auto flex flex-col text-center gap-4">
+          <div className="flex flex-col gap-2">
+            <h2>Get your Free Initial Consultation</h2>
+            <p>Simply fill in the form and we&apos;ll be in touch</p>
+          </div>
+          <div>
+            {list.map((l) => (
+              <div className="flex items-center justify-center gap-2">
+                <SealCheck />
+                <p>{l}</p>
+              </div>
+            ))}
+          </div>
         </div>
         <form
           onSubmit={handleSubmit}

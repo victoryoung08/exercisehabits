@@ -20,7 +20,7 @@ export type ImageProps = {
 export default function ImageWithText({ data }: ImageWithTextProps) {
   return (
     <div className="flex flex-col gap-8  items-start justify-center lg:flex-row">
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 w-full">
         <h3>{data.heading}</h3>
         <p>{data.body}</p>
         {data.button && (

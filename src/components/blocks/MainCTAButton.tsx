@@ -18,7 +18,7 @@ export default function MainCTAButton({ type = "default" }: TypeProps) {
   return (
     <div>
       <Button variant="default" className={cn(buttonClass)} onClick={handleCTA}>
-        Contact Us
+        Get Initial Consult Free
       </Button>
     </div>
   );

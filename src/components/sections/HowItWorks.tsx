@@ -23,7 +23,7 @@ export default function HowItWorks() {
     {
       step: 1,
       heading: "Get Started",
-      body: "Fill in our contact form",
+      body: "Fill in our form for a free initial consultation",
       icon: Asterisk,
     },
     {
@@ -40,7 +40,7 @@ export default function HowItWorks() {
     },
     {
       step: 4,
-      heading: "Done with NDIS",
+      heading: "Collaborate and NDIS Funded",
       body: "We'll work with your NDIS plan, and coordinator to ensure you're getting the best support",
       icon: CheckCircle,
     },

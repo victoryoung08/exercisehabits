@@ -2,23 +2,23 @@ export default function ServiceGrid() {
   const services = [
     {
       heading: "Weight Loss and Fitness",
-      body: "Improve your fitness and reduce your weight with exercise based on your level",
+      body: "Increase your activity and improve your weight with our easy exercise guidance.",
     },
     {
-      heading: "Exercise for Walking & Balance",
-      body: "Feel better and stronger on your feet to prevent falls and more indepedence",
+      heading: "Exercise for Independnce and Balance",
+      body: "We'll develop a program to help you feel more balanced whether on your feet or in a wheelchair.",
     },
     {
       heading: "Muscle and Joint Strength",
-      body: "Don't let your strength and joints hold you back. We use exercise to help your joints feel more supported",
+      body: "Develop your strength to support whatever you need to do.",
     },
     {
       heading: "Neurological Rehabilitation",
       body: "Improve your coordination, strength and function to help you do more",
     },
     {
-      heading: "Intellectual and ASD Exercise",
-      body: "Pair up with our Exercise Professionals to make fitness engaging and motivated",
+      heading: "Structured and Science-backed",
+      body: "We stay up to date with the latest exercise research so you can be sure to be getting the greatest and latest therapy.",
     },
   ];
   return (
