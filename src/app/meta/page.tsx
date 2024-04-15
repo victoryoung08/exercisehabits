@@ -22,13 +22,13 @@ export default async function Home() {
   // console.log(data[0]);
   const featureIcons = [
     {
-      heading: "Expert Guidance from Qualified Exercise Professionals",
-      body: "Be sure we'll come up with an exercise plan best suited for your individual needs",
+      heading: "Convenient, at home or anywhere you'd like sessions",
+      body: "We understand not everyone likes to exercise at a gym. That's why we focus on delvering exercise sessions where ever you'd like",
       icon: PersonSimpleThrow,
     },
     {
-      heading: "Exercise in the comfort of your own home",
-      body: "Our Exercise Physiologists come to you, so there's no need to travel anywhere",
+      heading: "Flexible Scheduling",
+      body: "You're busy. Other support workers, services and not to mention activities. We'll work around your schedule so you can be sure you're getting in exercise and fitness you need for a health and fit life.",
       icon: RoadHorizon,
     },
     {
@@ -43,22 +43,40 @@ export default async function Home() {
     },
   ];
 
-  const services = [
+  const heroList = [
     {
-      heading: "Weight Loss and Fitness",
-      body: "Increase your activity and improve your weight with our easy exercise guidance.",
+      key: "1",
+      item: "Mobile & In-Home | No need to travel",
     },
     {
-      heading: "Exercise for Independnce and Balance",
-      body: "We'll develop a program to help you feel more balanced whether on your feet or in a wheelchair.",
+      key: "2",
+      item: "Individualised Exercise Program | Never a one size fits all",
+    },
+    {
+      key: "3",
+      item: "We understand, we're patient and we're passionate to help you improve",
+    },
+    {
+      key: "4",
+      item: "Completely NDIS Funded",
+    },
+  ];
+  const services = [
+    {
+      heading: "Weight Management",
+      body: "Medications and inactive lifestyles can contribute to weight gain. We'll help you manage all these while also making it fun!",
+    },
+    {
+      heading: "Exercise made fun, not boring",
+      body: "We believe exercise shouldn't be a plain old boring routine. Our goal is to make exercise as fun as possible.",
     },
     {
       heading: "Muscle and Joint Strength",
       body: "Develop your strength to support whatever you need to do.",
     },
     {
-      heading: "Neurological Rehabilitation",
-      body: "Improve your coordination, strength and function to help you do more",
+      heading: "Better focus and mental health",
+      body: "Execise is amazing for the brain and given the right amount of exercise can help you feel better, improve your mood and most importantly healthier",
     },
     {
       heading: "Structured and Science-backed",
@@ -66,29 +84,28 @@ export default async function Home() {
     },
   ];
 
-  const heroList = [
-    {
-      key: "1",
-      item: "We come to you",
-    },
-    {
-      key: "2",
-      item: "Personalised exercise programs for your needs",
-    },
-    {
-      key: "3",
-      item: "Completely NDIS Funded",
-    },
-    {
-      key: "4",
-      item: "Incredible steps towards your goals every session",
-    },
-  ];
-
   return (
     <main className="bg-amber-50 bg-opacity-5">
-      <section className="bg-primary pb-8 rounded-b-[60px]">
+      <section className="">
         <div className="flex flex-col items-center justify-center section-padding gap-8 lg:flex-row">
+          <div className="flex flex-col gap-8 items-center text-center">
+            <h1 className="leading-tight">
+              In-Home Exercise Physiology,
+              <br />
+              <span className="bg-orange-200 px-2  rounded-md">
+                from therapists who care.
+              </span>
+            </h1>
+            <div className="flex flex-col gap-2">
+              {heroList.map((list) => (
+                <div className="flex gap-2 items-center" key={list.key}>
+                  <SealCheck size={20} />
+                  <p>{list.item}</p>
+                </div>
+              ))}
+            </div>
+            <MainCTAButton type="default" />
+          </div>
           <div className="w-full h-64 relative rounded-xl overflow-hidden lg:order-1 lg:h-96">
             <Image
               src="/ndis-exercise-physiology-mobile.jpeg"
@@ -100,36 +117,27 @@ export default async function Home() {
               alt="NDIS Mobile Exercise Physiologist"
             />
           </div>
-          <div className="flex flex-col gap-8 text-white">
-            <h1>
-              Get Access to a Healthy and Fitter You with our In Home NDIS
-              Exercise Physiology
-            </h1>
-            <div className="flex flex-col gap-2">
-              {heroList.map((list) => (
-                <div className="flex gap-2 items-center" key={list.key}>
-                  <SealCheck size={20} />
-                  <p>{list.item}</p>
-                </div>
-              ))}
-            </div>
-            <MainCTAButton type="secondary" />
-          </div>
         </div>
       </section>
       <LogoBlock textColor="white" />
       <Community />
       {/* Feature Cards */}
-      <section className="section-padding flex flex-col gap-8">
-        <div className="flex flex-col gap-4">
+      <section className="section-padding flex flex-col gap-8 items-center justify-center">
+        <div className="flex flex-col gap-4 max-w-[600px] text-center section-padding">
           <h2>
-            Everyone is unique. That&apos;s why our exercise programs are always
-            based on you.
+            Always personalised &{" "}
+            <span className="bg-primary px-2 py-1 text-white rounded-md">
+              never a one size fits all.
+            </span>
           </h2>
           <p>
-            Our Exercise Physiologists specialise working with NDIS Participants
-            so rest assure we&apos;ll figure out a suitable exercise plan based
-            on your needs and goals
+            And it&apos;s our goal to come up with the most specific and best
+            exercise program to help you live a healthy and independent life.
+          </p>
+          <p>
+            Our Exercise Physiologists have worked with 100+ NDIS participants
+            to regain their mobility, improve their balance and posture and
+            increase their fitness for better quality of life.
           </p>
         </div>
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
