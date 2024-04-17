@@ -88,7 +88,7 @@ export default async function Home() {
     <main className="bg-amber-50 bg-opacity-5">
       <section className="">
         <div className="flex flex-col items-center justify-center section-padding gap-8 lg:flex-row">
-          <div className="flex flex-col gap-8 items-center text-center">
+          <div className="flex flex-col gap-8 items-center text-center w-full">
             <h1 className="leading-tight">
               In Home Exercise Physiology for Intellectual Disability and ASD
               <br />
