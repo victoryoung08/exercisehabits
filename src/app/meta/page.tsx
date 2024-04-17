@@ -18,7 +18,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import Image from "next/image";
 import Video from "next-video";
-import ehVideo from "/videos/eh-video.mp4";
+import ehVideo from "/videos/exercise-habits-video.mp4";
 import BackgroundVideo from "next-video/background-video";
 
 export default async function Home() {
@@ -107,17 +107,20 @@ export default async function Home() {
       <section className="">
         <div className="flex flex-col items-center justify-center section-padding gap-8">
           <div className="flex flex-col gap-8 items-center text-center w-full">
-            <h1 className="leading-tight">
-              In-Home Exercise Physiology,
-              <br />
-              <span className="bg-orange-200 px-2  rounded-md">
-                from therapists who care.
-              </span>
-            </h1>
-            <h3>
-              Specialist Exercise Therapy for Neurological Conditions and
-              Disability
-            </h3>
+            <div className="flex flex-col gap-4">
+              <span>NDIS Exercise Physiology</span>
+              <h1 className="leading-tight">
+                Get fit, stronger and build a happier more confident you.
+                <br />
+                <span className="bg-orange-200 px-2  rounded-md">
+                  from therapists who care.
+                </span>
+              </h1>
+              <h3>
+                Specialist Exercise Therapy for Neurological Conditions and
+                Disability
+              </h3>
+            </div>
             <div className="flex flex-col gap-2">
               <div>
                 {heroList.map((list) => (
@@ -133,30 +136,20 @@ export default async function Home() {
               <MainCTAButton type="default" />
             </div>
           </div>
-          <div className="w-full h-64 relative rounded-xl overflow-hidden lg:order-1 lg:h-96">
-            <Image
-              src="/ndis-exercise-physiology-mobile.jpeg"
-              fill
-              style={{
-                objectFit: "cover",
-                width: "100%",
-              }}
-              alt="NDIS Mobile Exercise Physiologist"
-            />
+          <div className="w-full h-fit relative rounded-xl lg:order-1 lg:h-96">
+            {/* <BackgroundVideo
+              src={ehVideo}
+              className="w-[300px] h-[300px] aspect-square rounded-lg lg:w-[360px] lg:h-[360px] object-contain "
+            /> */}
           </div>
         </div>
       </section>
       {/* CTA Phone Block */}
-      <section className="section-padding bg-sky-100 bg-opacity-30 flex flex-col items-center justify-center text-center lg:flex-row lg:text-center">
+      <section className="section-padding bg-blue-100 bg-opacity-20 flex flex-col items-center justify-center text-center lg:flex-row lg:text-center">
         <div className="w-full">
           <CenteredCTA data={centerCTA} />
         </div>
-        <div className="w-full h-full p-4 flex items-center justify-center">
-          <BackgroundVideo
-            src={ehVideo}
-            className="w-[240px] h-[240px] aspect-square rounded-lg overflow-hidden lg:w-[360px] lg:h-[360px] "
-          />
-        </div>
+        <div className="w-full h-full p-4 flex items-center justify-center"></div>
       </section>
       <LogoBlock textColor="white" />
       <Community />

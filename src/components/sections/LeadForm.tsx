@@ -24,9 +24,9 @@ export default function LeadForm() {
   };
 
   const list = [
-    "learn how exercise can improve your health and independence",
-    "breakdown the steps to achieve your goals",
-    "understand if we're a good fit working together",
+    "Discuss your goals and needs",
+    "Learn how exercise can help",
+    "Talk about the best treatment plan for you",
   ];
 
   return (
@@ -34,7 +34,7 @@ export default function LeadForm() {
       className="py-12 px-4 bg-sky-900  flex flex-col items-center justify-center"
       id="contactBlock"
     >
-      <div className="bg-white py-8 px-12 rounded-lg max-w-[600px] w-full">
+      <div className="bg-white py-8 px-4 lg:px-12 rounded-lg max-w-[600px] w-full">
         <div className="py-8 mx-auto flex flex-col text-center gap-4">
           <div className="flex flex-col gap-2">
             <h2>Get your Free Initial Consultation</h2>
@@ -42,8 +42,8 @@ export default function LeadForm() {
           </div>
           <div>
             {list.map((l) => (
-              <div className="flex items-center justify-center gap-2" key={l}>
-                <SealCheck />
+              <div className="flex items-center gap-2" key={l}>
+                <SealCheck size={20} />
                 <p>{l}</p>
               </div>
             ))}
