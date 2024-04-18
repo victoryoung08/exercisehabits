@@ -6,6 +6,7 @@ import { Textarea } from "../ui/textarea";
 import { addMailerliteContact } from "@/lib/actions";
 import { useState } from "react";
 import { SealCheck } from "@phosphor-icons/react/dist/ssr";
+import SecondaryCTAButton from "../blocks/SecondaryCTAButton";
 export default function LeadForm() {
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = (e: any) => {
@@ -40,9 +41,9 @@ export default function LeadForm() {
             <h2>Get your Free Initial Consultation</h2>
             <p>Simply fill in the form and we&apos;ll be in touch</p>
           </div>
-          <div>
+          <div className="flex flex-col items-center justify-center">
             {list.map((l) => (
-              <div className="flex items-center gap-2" key={l}>
+              <div className="flex items-center gap-2 mx-auto" key={l}>
                 <SealCheck size={20} />
                 <p>{l}</p>
               </div>
@@ -72,23 +73,29 @@ export default function LeadForm() {
             </label>
             <Textarea name="info" />
           </div>
-          <div className="py-4 w-2/3 relative mx-auto">
-            <Button
-              variant="default"
-              size="lg"
-              type="submit"
-              className="bg-orange-500 w-full"
-              disabled={isLoading}
-            >
-              {isLoading ? "Submitting..." : "Contact Us"}
-            </Button>
-            <Image
-              src={"/logos/ndis.svg"}
-              width={32}
-              height={32}
-              alt="ndis-logo"
-              className="absolute top-1/2 right-[-20%] -translate-y-[50%]"
-            />
+          <div className="flex flex-col gap-2 items-center">
+            <div className=" w-2/3 relative mx-auto">
+              <Button
+                variant="default"
+                size="lg"
+                type="submit"
+                className="bg-orange-500 w-full"
+                disabled={isLoading}
+              >
+                {isLoading ? "Submitting..." : "Contact Us"}
+              </Button>
+
+              <Image
+                src={"/logos/ndis.svg"}
+                width={32}
+                height={32}
+                alt="ndis-logo"
+                className="absolute top-1/2 right-[-20%] -translate-y-[50%]"
+              />
+            </div>
+            <div>
+              <SecondaryCTAButton type="telephone" style="secondary" />
+            </div>
           </div>
         </form>
       </div>

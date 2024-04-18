@@ -97,8 +97,11 @@ export default async function Home() {
       "Talk about the best treatment plan for you",
     ],
     cta: "Enquire now",
-    buttonStyle: "primary",
-    classStyles: "flex flex-col gap-8 items-center lg:items-start",
+    buttonStyle: "default",
+    secondaryButtonText: "Give us a Call",
+    secondaryButtonType: "telephone",
+    secondaryButtonStyle: "secondary",
+    classStyles: "flex flex-col gap-8 items-start w-full lg:items-center",
   };
 
   return (
@@ -146,10 +149,19 @@ export default async function Home() {
       </section>
       {/* CTA Phone Block */}
       <section className="section-padding bg-blue-100 bg-opacity-20 flex flex-col items-center justify-center text-center lg:flex-row lg:text-center">
-        <div className="w-full">
+        <div className="w-full flex flex-col gap-8 lg:flex-row justify-center items-center">
           <CenteredCTA data={centerCTA} />
+          <div className="w-full flex items-center justify-center ">
+            <div className="relative w-[300px] h-[300px] rounded-lg overflow-hidden">
+              <Image
+                src="/ndis-exercise-physiology-community.png"
+                alt="ndis exercise physiology community"
+                fill
+                style={{ objectFit: "cover" }}
+              />
+            </div>
+          </div>
         </div>
-        <div className="w-full h-full p-4 flex items-center justify-center"></div>
       </section>
       <LogoBlock textColor="white" />
       <Community />

@@ -4,6 +4,7 @@ import { Button, buttonVariants } from "../ui/button";
 import { handleCTA } from "../ui/navbar";
 import MainCTAButton from "./MainCTAButton";
 import Image from "next/image";
+import SecondaryCTAButton from "./SecondaryCTAButton";
 
 type CTAProps = {
   data: {
@@ -11,8 +12,11 @@ type CTAProps = {
     body?: string;
     cta: string;
     list: string[];
-    buttonStyle: string;
+    buttonStyle?: string;
     classStyles?: string | undefined;
+    secondaryButtonText?: string;
+    secondaryButtonType?: string;
+    secondaryButtonStyle?: string;
   };
 };
 export default function CenteredCTA({ data }: CTAProps) {
@@ -31,7 +35,18 @@ export default function CenteredCTA({ data }: CTAProps) {
           ))}
         </div>
       )}
-      <MainCTAButton type={data.buttonStyle} />
+      <div className="flex flex-col gap-2">
+        {data.cta && data.buttonStyle && (
+          <MainCTAButton type={data.buttonStyle} text={data.cta} />
+        )}
+
+        {data.secondaryButtonText && data.secondaryButtonType && (
+          <SecondaryCTAButton
+            type={data.secondaryButtonType}
+            style={data.secondaryButtonStyle}
+          />
+        )}
+      </div>
     </section>
   );
 }

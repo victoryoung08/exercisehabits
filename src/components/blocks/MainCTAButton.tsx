@@ -3,9 +3,13 @@ import { handleCTA } from "../ui/navbar";
 import cn from "classnames";
 type TypeProps = {
   type: string;
+  text?: string;
 };
 
-export default function MainCTAButton({ type = "default" }: TypeProps) {
+export default function MainCTAButton({
+  type = "default",
+  text = "Get Initial Consult Free",
+}: TypeProps) {
   let buttonClass = "";
   switch (type) {
     case "default":
@@ -18,7 +22,7 @@ export default function MainCTAButton({ type = "default" }: TypeProps) {
   return (
     <div>
       <Button variant="default" className={cn(buttonClass)} onClick={handleCTA}>
-        Get Initial Consult Free
+        {text}
       </Button>
     </div>
   );
