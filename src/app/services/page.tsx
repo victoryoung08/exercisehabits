@@ -140,10 +140,10 @@ export default async function Home() {
             </div>
           </div>
           <div className="w-full h-fit relative rounded-xl lg:order-1 lg:h-96">
-            {/* <BackgroundVideo
+            <BackgroundVideo
               src={ehVideo}
               className="w-[300px] h-[300px] aspect-square rounded-lg lg:w-[360px] lg:h-[360px] object-contain "
-            /> */}
+            />
           </div>
         </div>
       </section>
